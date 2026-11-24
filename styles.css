@@ -1,0 +1,328 @@
+.section {
+    padding: 20px;
+    width: 700px;
+    min-height: 139.71px;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    margin: 0;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    padding: 30px;
+    width: 450px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.container2 {
+    margin: 0;
+    background-color: rgba(49, 104, 246, 0.05);
+    border-color: rgba(49, 104, 246, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 450px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(49, 104, 246, 0.1);
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.container2 p {
+    color: #3168f6;
+    font-weight: 530;
+}
+
+.para1 {
+    display: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3168f6;
+}
+
+.netgearList {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #3168f6;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+}
+
+.nestedHeading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3168f6;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(49, 104, 246, 0.15);
+    position: relative;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+.nestedHeading::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #3168f6 0%, rgba(49, 104, 246, 0.3) 100%);
+    border-radius: 2px;
+}
+
+.unorderedList1 {
+    display: none;
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.unhide {
+    display: block;
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+#optiplex, #optiplexMicro, #optiplexMicroPro, #iPad, #iPadMini {
+    display: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+#optiplex.unhide, #optiplexMicro.unhide, #optiplexMicroPro.unhide, #iPad.unhide, #iPadMini.unhide {
+    display: block;
+    transition: all 0.9s ease-in-out;
+}
+
+.close {
+    background-color: #3168f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close:hover {
+    background-color: #254ea1;
+}
+
+.close:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 104, 246, 0.5);
+}
+
+.close:active {
+    background-color: #1e3a75;
+}
+
+.mx68,.mx68Lights {
+    background-color: rgba(49, 104, 246, 0.05);
+    border-color: rgba(49, 104, 246, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(49, 104, 246, 0.1);
+    border: 1px solid #ddd;
+    display: none;
+}
+.mx68 p {
+    color: #3168f6;
+    font-weight: 530;
+}
+
+.mx68Lights, .mx681, .mx682 {
+    display: none;
+}
+
+.mx68Lights.unhide, .mx681.unhide, .mx682.unhide, .mx68.unhide {
+    display: block;
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+
+.ledSection {
+    display: none;
+    background: linear-gradient(135deg, rgba(49, 104, 246, 0.03) 0%, rgba(49, 104, 246, 0.08) 100%);
+    border: 1px solid rgba(49, 104, 246, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(49, 104, 246, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+.ledSection.unhide {
+    display: block;
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#MR28, #mx68Section {
+    display: none;
+}
+#MR28.unhide, #mx68Section.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}   
+
+/* Network Switch Styles */
+
+#dell2816, #dellX1018p, #netGear {
+    display: none;
+}
+#dell2816.unhide, #dellX1018p.unhide, #netGear.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* End of Network Switch Styles */
+
+/*Payment Terminal Styles */
+
+#lane7000, #link2500 {
+    display: none;
+}
+#lane7000.unhide, #link2500.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/*Barcode Scanner Styles */
+
+#KDC, #LS2208 {
+    display: none;
+}
+#KDC.unhide, #LS2208.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* Receipt Printer Styles */
+#kube2, #Q3x {
+    display: none;
+}
+#kube2.unhide, #Q3x.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* iPad Cloud Printer Styles */
+#starPrinter, #epsonPrinter {
+    display: none;
+}
+#starPrinter.unhide, #epsonPrinter.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/*full size printer styles*/
+#dell1, #dell2, #xerox6022, #lexmarkCX331 {
+    display: none;
+}
+#dell1.unhide, #dell2.unhide, #xerox6022.unhide, #lexmarkCX331.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* Image Styles */
+.dealerImages {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dealerImages:hover {
+    opacity: 0.85;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.09);
+}
+
+/* Image Overlay Styles */
+.image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-overlay.active {
+    display: flex;
+}
+
+.image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Prevent scroll on anchor links */
+html {
+    scroll-behavior: auto;
+}
+
+a[href^="#"] {
+    text-decoration: none;
+}
+
+
+a {
+    color: #3168f6;
+    text-decoration: none;
+}
+
+.heading1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+

@@ -1,0 +1,1675 @@
+
+
+<style>
+
+
+.section {
+    padding: 20px;
+    width: 700px;
+    min-height: 139.71px;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    margin: 0;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    padding: 30px;
+    width: 450px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.container2 {
+    margin: 0;
+    background-color: rgba(49, 104, 246, 0.05);
+    border-color: rgba(49, 104, 246, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    width: 450px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(49, 104, 246, 0.1);
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.container2 p {
+    color: #3168f6;
+    font-weight: 530;
+}
+
+.para1 {
+    display: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3168f6;
+}
+
+.netgearList {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #3168f6;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+}
+
+.nestedHeading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3168f6;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(49, 104, 246, 0.15);
+    position: relative;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+.nestedHeading::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #3168f6 0%, rgba(49, 104, 246, 0.3) 100%);
+    border-radius: 2px;
+}
+
+.unorderedList1 {
+    display: none;
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.unhide {
+    display: block;
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+#optiplex, #optiplexMicro, #optiplexMicroPro, #iPad, #iPadMini {
+    display: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+#optiplex.unhide, #optiplexMicro.unhide, #optiplexMicroPro.unhide, #iPad.unhide, #iPadMini.unhide {
+    display: block;
+    transition: all 0.9s ease-in-out;
+}
+
+.close {
+    background-color: #3168f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close:hover {
+    background-color: #254ea1;
+}
+
+.close:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 104, 246, 0.5);
+}
+
+.close:active {
+    background-color: #1e3a75;
+}
+
+.mx68,.mx68Lights {
+    background-color: rgba(49, 104, 246, 0.05);
+    border-color: rgba(49, 104, 246, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(49, 104, 246, 0.1);
+    border: 1px solid #ddd;
+    display: none;
+}
+.mx68 p {
+    color: #3168f6;
+    font-weight: 530;
+}
+
+.mx68Lights, .mx681, .mx682 {
+    display: none;
+}
+
+.mx68Lights.unhide, .mx681.unhide, .mx682.unhide, .mx68.unhide {
+    display: block;
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+
+.ledSection {
+    display: none;
+    background: linear-gradient(135deg, rgba(49, 104, 246, 0.03) 0%, rgba(49, 104, 246, 0.08) 100%);
+    border: 1px solid rgba(49, 104, 246, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(49, 104, 246, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+.ledSection.unhide {
+    display: block;
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#MR28, #mx68Section {
+    display: none;
+}
+#MR28.unhide, #mx68Section.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}   
+
+/* Network Switch Styles */
+
+#dell2816, #dellX1018p, #netGear {
+    display: none;
+}
+#dell2816.unhide, #dellX1018p.unhide, #netGear.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* End of Network Switch Styles */
+
+/*Payment Terminal Styles */
+
+#lane7000, #link2500 {
+    display: none;
+}
+#lane7000.unhide, #link2500.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/*Barcode Scanner Styles */
+
+#KDC, #LS2208 {
+    display: none;
+}
+#KDC.unhide, #LS2208.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* Receipt Printer Styles */
+#kube2, #Q3x {
+    display: none;
+}
+#kube2.unhide, #Q3x.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* iPad Cloud Printer Styles */
+#starPrinter, #epsonPrinter {
+    display: none;
+}
+#starPrinter.unhide, #epsonPrinter.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/*full size printer styles*/
+#dell1, #dell2, #xerox6022, #lexmarkCX331 {
+    display: none;
+}
+#dell1.unhide, #dell2.unhide, #xerox6022.unhide, #lexmarkCX331.unhide {
+    display: block;
+    animation: fadeInSlide 0.9s ease-out;
+}
+
+/* Image Styles */
+.dealerImages {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dealerImages:hover {
+    opacity: 0.85;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.09);
+}
+
+/* Image Overlay Styles */
+.image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-overlay.active {
+    display: flex;
+}
+
+.image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+
+html {
+    scroll-behavior: auto;
+}
+
+a[href^="#"] {
+    text-decoration: none;
+}
+
+a {
+    color: #3168f6;
+    text-decoration: none;
+}
+
+.heading1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+</style>
+
+
+<div class="image-overlay" id="imageOverlay">
+    <img src="" alt="Expanded view" id="overlayImage">
+</div>
+<section class="section">
+    <h1 class="heading1">Dealer Supported Hardware - Basic Troubleshooting</h1>
+<br>
+    <p><a href="https://learning.cricketwireless.com/student/activity/453267-ros-dealer-supported-hardware?sid=6fb7d7fd-c0a3-4342-82ed-65aa1421baab&amp;sid_i=0" target="_blank">ROS: Dealer Supported Hardware</a></p>
+    <h2>Overview</h2>
+    <p>This document provides basic troubleshooting steps for dealer-supported hardware issues. Follow the steps below to identify and resolve common problems.</p>
+<br>    
+    <div class="container" id="posComputers">
+        <a href="javascript:void(0)" onclick="unhideUl1()" type="">Point of Sales Computers</a><br><br>
+        <ul class="unorderedList1" id="ul1">
+            <li><a href="javascript:void(0)" onclick="openOptiplex()">Dell Optiplex: 3000/3060/3070/3080/3090</a></li>
+            <li><a href="javascript:void(0)" onclick="openOptiplexMicro()">Dell Optiplex Micro: 7010 &amp; 7020</a></li>
+            <li><a href="javascript:void(0)" onclick="openOptiplexMicroPro()">Dell Pro Micro QCM1250</a></li>
+            <li><a href="javascript:void(0)" onclick="openiPad()">iPad (7th Gen or higher)</a></li>
+           <!-- <li><a href="#iPadMini" onclick="openiPadMini()">iPad Mini (PPP)</a></li> -->
+        </ul>
+    </div>
+<br>
+
+    <div class="container2" id="optiplex">
+        <p class="nestedHeading">Dell Optiplex: 3000/3060/3070/3080/3090</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Ensure the computer is powered on. Look for power indicator lights.</p>
+        <p>- Powercycle PC by pressing on the power button.</p>
+        <p>- Check external power. Make sure power cord is securely plugged into the computer and outlet.</p>
+        <p>- Unplug the power cord, press and hold the power button for 15-20 seconds to discharge residual power, reconnect power cord and turn it on again.</p>
+        <p>- Check monitor connection. Ensure the monitor cable is securely connected to both the computer and monitor.</p>
+        <span style="color:red; font-size: 12px"><b>Note:</b> Monitors are not PCS!</span><br><br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/eec11f3c-3303-4e5c-954a-8ab9fa926b28/delloptiplex3000.webp"><br>
+        <!--<p><a href="">Exceed Articles: If the issue persists, click here.</a></p>-->
+        <button type="button" class="close" onclick="closeOptiplex()">Close</button>
+    </div>
+    <div class="container2" id="optiplexMicro">
+        <p class="nestedHeading">Dell Optiplex Micro: 7010 &amp; 7020</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check the power button: Ensure it is not stuck and try a different power outlet.</p>
+        <p>- Cycle the power: Unplug the computer, wait a few minutes, and plug it back in.</p>
+        <p>- Verify all cables and internal connections are secure.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/c24b74c8-df40-41cb-9c46-6568ea83146c/delloptiplex7010.jpeg"><br>
+        <!--<p><a href="">Exceed Articles: If the issue persists, click here.</a></p>-->
+        <button type="button" class="close" onclick="closeOptiplexMicro()">Close</button>
+    </div>
+    <div class="container2" id="optiplexMicroPro">
+        <p class="nestedHeading">Dell Pro Micro QCM1250</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Disconnect external devices: Unplug all external peripherals, like USB drives, keyboards and monitors.</p>
+        <p>- Power Cycle: Shut down the system, unplug the power cable, and remove the battery (if applicable). Wait a few minutes, then reconnect the power and try restarting.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/d755285b-1119-4684-a5ef-87d47125cf2f/dellmicroqcm1250.jpg"><br>
+        <!--<p><a href="">Exceed Articles: If the issue persists, click here.</a></p>-->
+        <button type="button" class="close" onclick="closeOptiplexMicroPro()">Close</button>
+    </div>
+    <div class="container2" id="iPad">
+        <p class="nestedHeading">iPad (7th Gen or Higher)</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Restart the iPad: Press and hold the power button until the "slide to power off" slider appears. Slide it to turn off the device, then press and hold the power button again to turn it back on.</p>
+        <p>- Check for Software Updates: Go to Settings &gt; General &gt; Software Update to see if there are any available updates for your iPad.</p>
+        <p>- Reset network settings: If you're experiencing connectivity issues, go to Settings &gt; General &gt; Reset &gt; Reset Network Settings. Note that this will erase saved Wi-Fi passwords.</p>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/90cccc20-dcdb-4922-82e1-a8fd716b8d9c/aktivateipad.png"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026-ros-hardware-support?sid=4309bebe-abe8-4e13-959a-cf2838a805d2&amp;sid_i=0" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+        <button type="button" class="close" onclick="closeiPad()">Close</button>
+    </div>
+<br>
+    <!-- <div class="container2" id="iPadMini">
+        <p class="nestedHeading">iPad Mini (PPP)</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Restart the iPad Mini: Press and hold the power button until the "slide to power off" slider appears. Slide it to turn off the device, then press and hold the power button again to turn it back on.</p>
+        <p>- Check for software updates: Go to Settings > General > Software Update to see if there are any available updates for your iPad Mini.</p>
+        <p>- Reset network settings: If you're experiencing connectivity issues, go to Settings > General > Reset > Reset Network Settings. Note that this will erase saved Wi-Fi passwords.</p>
+        <p><a href="">Exceed Articles: If the issue persists, click here.</a></p>
+        <button type="button" class="close" onclick="closeiPadMini()">Close</button>
+    </div><br> -->
+
+    <div class="container" id="firewalls">
+        <a href="javascript:void(0)" onclick="unhideUl2()" type="">Firewalls</a><br><br>
+        <ul class="unorderedList1" id="ul2">
+            <li><a href="javascript:void(0)" onclick="openMX68()">Cisco MX68</a></li>
+            <li><a href="javascript:void(0)" onclick="openMR28()">Cisco MR28 (Wireless Access Point)</a></li>
+        </ul>
+    </div>
+<br>
+    <div class="container2" id="mx68Section">
+        <p class="nestedHeading">Cisco MX68</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Ensure the firewall is powered on and all cables are securely connected.</p>
+        <p>- Check internet connection and upstream firewall settings.</p>
+        <p><a style="font-weight: bold; text-decoration: underline; cursor: pointer;" href="javascript:void(0)" onclick="openStatusLights()">📋 Status Lights</a></p>
+        <div class="mx68Lights" id="mx68StatusLights">
+            <p><a href="javascript:void(0)" onclick="openNoLights()" id="noLinkLights">No Link Lights</a></p>
+            <div class="mx681" id="noLights">
+            <p>If there are no lights on an ethernet port when a device is connected:</p>
+            <p>- Confirm the port is enabled in the Cisco Meraki Dashboard</p>
+            <p>- Check that the connected device is powered on and functioning correctly</p>
+            <button type="button" class="close" onclick="closeNoLights()">Close</button><br><br>
+            </div>
+            <p><a href="javascript:void(0)" onclick="openSolidAmber()" id="solidAmberLights">Solid Amber power light</a></p>
+            <div class="mx682" id="solidAmber">
+            <p>If the power light is solid amber:</p>
+            <p>- Verify the uplink cable is properly connected and the upstream internet source is working.</p>
+            <p>- Check that any upstream firewall is configured to allow Meraki's necessary outboud connections.</p>
+            <p>- Check the appliance's local status page to ensure the management IP is configured correctly</p>
+            <button type="button" class="close" onclick="closeSolidAmber()">Close</button><br><br>
+            </div>
+            <p><a href="https://learning.cricketwireless.com/student/page/2095538-ros-cisco-mx68-mr28-leds?sid=76e7bfa0-383e-4e5f-89bd-5722ed6b7153&amp;sid_i=1" target="_blank" id="closeLEDelement">Click here for more LED Troubleshooting</a></p>
+<br><br>
+            <button type="button" class="close" onclick="closeStatusLights()" id="closeElement">Close
+        </button>
+</div>
+<br><br>
+            <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/4a60e92e-46cf-44c1-8428-8ca6e2f7fb49/mx68.png"><br>
+            <p><a href="https://learning.cricketwireless.com/student/page/2152692-ros-cisco-mx68-mr28-installation-troubleshooting?sid=76e7bfa0-383e-4e5f-89bd-5722ed6b7153&amp;sid_i=0" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br>
+            <button type="button" class="close" onclick="closeMX68()">Close</button>
+    </div>
+
+    <div class="container2" id="MR28">
+        <p class="nestedHeading">Cisco MR28 (Wireless Access Point)</p>
+        <p>Basic Troubleshooting:</p>
+        <p><a style="font-weight: bold; text-decoration: underline; cursor: pointer;" href="javascript:void(0)" onclick="openLED()"> 📋 Check LED Indicators for any unusual patterns or colors.</a></p>
+        <div class="ledSection" id="LED">
+        <p style="color: green;">- Solid Green: Powered on and connected to the internet.</p>
+        <p style="color: blue;">- Solid Blue: Powered on, connected to the interent and has clients connected.</p>
+        <p style="color: rgb(202, 137, 16);">- Blinking Orange: Booting up or upgrading firmware. This is normal, but if it persists, there may be a hardware isssue or the AP (Access Point) can't find an uplink.</p>
+        <p style="color: orange;">- Solid Orange: The AP (Access Point) is booting up or has a hardware issue.</p>
+<br><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2095538-ros-cisco-mx68-mr28-leds?sid=76e7bfa0-383e-4e5f-89bd-5722ed6b7153&amp;sid_i=1" target="_blank">Click here for LEDs Troubleshooting</a></p>
+        <button type="button" class="close" onclick="closeLED()">Close</button>
+        </div>
+        <p>- Check Cables: Ensure the Ethernet cable is fully and securely seated in both the AP (Access Point) and the switch port.</p>
+        <p>- Test the wired connection: Connect a client device directly to the network to rule out upstream issues.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/d421903d-56bb-430c-af75-796d53151332/mr28.jpeg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2152692-ros-cisco-mx68-mr28-installation-troubleshooting?sid=76e7bfa0-383e-4e5f-89bd-5722ed6b7153&amp;sid_i=0" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeMR28()">Close</button>
+    </div>
+<br>
+    
+    <div class="container" id="networkSwitch">
+        <a href="javascript:void(0)" onclick="unhideUl3()">Network Switch</a><br><br>
+        <ul class="unorderedList1" id="ul3">
+            <li><a href="javascript:void(0)" onclick="openDellPowerConnect()">Dell PowerConnect 2816</a></li>
+            <li><a href="javascript:void(0)" onclick="openDellX1018p()">Dell X1018p</a></li>
+            <li><a href="javascript:void(0)" onclick="openNetGear()">NetGear GS716T-300NAS</a></li>
+        </ul>
+    </div>
+<br>
+<!-- Troubleshooting Sections for Network Switches -->
+    <div class="container2" id="dell2816">
+        <p class="nestedHeading">Dell PowerConnect 2816</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check the power cable and outlet: Ensure the power cord is securely plugged into both the switch and a working outlet.</p>
+        <p>- Power cycle the switch: Disconnect the power cord from the back of the switch. Wait for at least 30 seconds to drain any residual power, then reconnect it and power the unit on.</p>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/238de528-4e4d-40a4-b56f-08507e437e58/powerconnect2816.jpeg"><br>
+        <!--<p><a href="">Exceed Articles: If the issue persists, click here.</a></p>-->
+        <button type="button" class="close" onclick="closeDell2816()">Close</button>
+    </div>
+    <div class="container2" id="dellX1018p">
+        <p class="nestedHeading">Dell X1018p</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check the power cable and outlet: Ensure the power cord is securely plugged into both the switch and a working outlet.</p>
+        <p>- Power cycle the switch: Disconnect the power cord from the back of the Dell device. Wait for at least 30 seconds to drain any residual power, then reconnect it and power the unit on.</p>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/be083038-e6a6-4354-9d08-45f8f5971e55/dellx1018.jpg"><br>
+        <!--<p><a href="">Exceed Articles: If the issue persists, click here.</a></p>-->
+        <button type="button" class="close" onclick="closeDellX1018p()">Close</button>
+    </div>
+    <div class="container2" id="netGear">
+        <p class="nestedHeading">NetGear GS716T-300NAS</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check physical connections: Ensure the power cord is securely plugged into both the switch and a working power outlet. Confirm all ethernet cables are firmly connected to the correct ports</p>
+        <p>- Inspect the LEDs:</p>
+        <ul class="netgearList">
+            <li>Power LED: When the switch is on, this light should be solid green or white. A blinking or solid amber light during operation could indicate a problem.</li>
+<br>
+            <li>Port LEDs: For each active port, you should see a light. A blinking light indicates network activity. If the LED is off, it means there is no connection to that port.</li>
+        </ul>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/a0ed8afe-9d03-48f0-a17a-d4e14d27211c/netgeargs716t.jpeg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/740812-netgear-gs716t-300nas?sid=e36f8e88-d957-485f-aceb-d3cf3636316e&amp;sid_i=0" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeNetGear()">Close</button>
+    </div>
+<br>
+<!-- End of Network Switch Troubleshooting Sections -->
+
+    <div class="container" id="paymentTerminals">
+        <a href="javascript:void(0)" onclick="unhideUl4()">Payment Terminals</a><br><br>
+        <ul class="unorderedList1" id="ul4">
+            <li><a href="javascript:void(0)" onclick="openLane7000()">Ingenico Lane/7000</a></li>
+            <li><a href="javascript:void(0)" onclick="openLink2500()">Ingenico Link/2500</a></li>
+        </ul>
+    </div>
+<br>
+    <!-- Troubleshooting Sections for Payment Terminals -->
+    <div class="container2" id="lane7000">
+        <p class="nestedHeading">Ingenico Lane/7000</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Start with a simple reboot by holding the yellow key and the # key for 3 seconds</p>
+        <p>- Restart the terminal by unplugging it from power, waiting 10 seconds, and plugging it back in.</p>
+        <p>- Ensure the power and network cables are securely plugged into both the terminal and the wall or router.</p>
+        <p>- Confirm network status: Check the connection status by pressing 0000 on the keypad and looking for "ACTIVE" or "CONNECTED".</p>
+        <p>- Ensure the ethernet connection is plugged into a live port on the switch.</p>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/2365056" target="_blank">Lane 7000 Setup: Click Here</a></p>
+<br><br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/ee538018-63d4-4aa5-ada6-9c37b9e8a8fb/lane7000.jpeg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/2365063" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+        <button type="button" class="close" onclick="closeLane7000()">Close</button>
+    </div>
+    <div class="container2" id="link2500">
+        <p class="nestedHeading">Ingenico Link/2500</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Press and hold the yellow button and the # button simultaneously for 3-5 seconds until the device turns off. Press the green button to power it back on.</p>
+        <p>- On the host device, reset network settings and reconnect to Wi-Fi or re-pair the bluetooth device.</p>
+        <p>- Check communication mode: From the idle screen, press 0001, select Communication Type, and ensure it is set to WIFI or Bluetooth_Serial as needed.</p>
+        <p>- Ensure Bluetooth and Local Network permissions are enabled in the iPad settings.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/8626e078-cdff-4d5e-8b64-6600f2e51acf/link2500.png"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/2365063" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+        <button type="button" class="close" onclick="closeLink2500()">Close</button>
+    </div>
+<br>
+<!-- End of Payment Terminal Troubleshooting Sections -->
+
+
+    <div class="container" id="apgCashDrawer">
+        <a href="javascript:void(0)" onclick="unhideP1()">APG Cash Drawer</a><br><br>
+        <div class="para1" id="p1">
+        <p>Basic Troubleshooting:</p>
+        <p>- Check for physical obstructions or lock issues:</p>
+        <p>- Verify the cable connection to the printer or POS and try restarting the connected devices</p>
+        <p>- Check the lock: Ensure the keyhole is in the vertical (unlocked) position. If it's horizontal, the drawer is locked.</p>
+        <p>- Ensure it's closed: The drawer may not be open if it's not fully closed. Manually push it to ensure it's completely closed.</p>
+        <p>- Use the key: Try to open the drawer with the physical key. If the key doesn't work, the mechanical mechanism may be jammed or broken.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/e344c9c7-2378-4c8f-81f7-db10897b4112/apgcashdrawer.png"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2531000-ros-abo-cash-drawer-management-and-troubleshooting?sid=9566ce3a-74a8-4593-ad2d-b0abc7878e0c&amp;sid_i=0" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeP1()">Close</button>
+        </div>
+    </div>
+<br><br>
+
+
+    <div class="container" id="barcodeScanner">
+        <a href="javascript:void(0)" onclick="unhideUl5()">Barcode Scanner</a><br><br>
+        <ul class="unorderedList1" id="ul5">
+            <li><a href="javascript:void(0)" onclick="openKDC()">Koamtac Data Collector (KDC)</a></li>
+            <li><a href="javascript:void(0)" onclick="openLS2208()">Symbol LS2208</a></li>
+        </ul>
+    </div>
+<br>
+    <!--Barcode Scanner Sections-->
+    <div class="container2" id="KDC">
+        <p class="nestedHeading">Koamtac Data Collector (KDC)</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Soft reset: Hold the power button for an extended period to force a restart. </p>
+        <p>- Cannot Pair: Ensure the bluetooth is enabled on both the KDC and the host device. Unpair and re-pair the devices.</p>
+        <p>- Device not powering on: Charge the device for at least 30 minutes before trying again.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/6185a63b-3eda-4692-a832-72e00ec871aa/kdc-scanner.jpg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/1914478" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeKDC()">Close</button>
+    </div>
+    <div class="container2" id="LS2208">
+        <p class="nestedHeading">Symbol LS2208</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check USB Connection: Unplug the scanner, then plug it back in.</p>
+        <p>- Try a different port: Connect the scanner to a different USB port on your computer or accessory hub.</p>
+        <p>- Check if the computer recognizes it: On a Windows computer, go to "Control Panel" &gt; "Devices and Printers" to see if the scanner is listed.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/dfa1ec7d-b6aa-495d-b650-cc3352554853/symbolls2208.jpg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/569357" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeLS2208()">Close</button>
+    </div>
+<br>
+
+    <div class="container" id="pcReceiptPrinters">
+        <a href="javascript:void(0)" onclick="unhideUl6()">PC Receipt Printers</a><br><br>
+        <ul class="unorderedList1" id="ul6">
+            <li><a href="javascript:void(0)" onclick="openKube2()">Custom Engineering Kube II</a></li>
+            <li><a href="javascript:void(0)" onclick="openQ3x()">Custom Engineering Q3x</a></li>
+        </ul>
+    </div>
+<br>
+    <!--PC Receipt Printer Sections-->
+    <div class="container2" id="kube2">
+        <p class="nestedHeading">Custom Engineering Kube II</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Inspect the cables: Make sure that cables are not damaged and are properly connected.</p>
+        <p>- Power cycle printer: Turn the printer off, wait for a few seconds, and then turn it back on.</p>
+        <p>- Reseat Ethernet cable: Ensure ethernet cable is connected to the printer and the switch.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/80633aac-bb49-49ba-a7d0-a65006c46d87/kubeii.png"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/492452" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+        <button type="button" class="close" onclick="closeKube2()">Close</button>
+    </div>
+    <div class="container2" id="Q3x">
+        <p class="nestedHeading">Custom Engineering Q3x</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Inspect the cables: Make sure that cables are not damaged and are properly connected.</p>
+        <p>- Power cycle printer: Turn the printer off, wait for a few seconds, and then turn it back on.</p>
+        <p>- Reset Ethernet cable: Ensure ethernet cable is connected to the printer and the switch.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/62cb04a7-d323-429e-a231-44ef8899f424/q3x.png"><br>
+        <p><a href="">Exceed Articles: If the issue persists, click here.</a></p>
+        <button type="button" class="close" onclick="closeQ3x()">Close</button>
+    </div>
+<br>
+
+    <div class="container" id="iPadCloudReceiptPrinters">
+        <a href="javascript:void(0)" onclick="unhideUl7()">iPad Cloud Receipt Printers</a><br><br>
+        <ul class="unorderedList1" id="ul7">
+            <li><a href="javascript:void(0)" onclick="openStarPrinter()">Star Micro Cloud printer (Models TSP650II, TSP700II, TSP100IV)</a></li>
+            <li><a href="javascript:void(0)" onclick="openEpsonPrinter()">Epson TM-T88VI</a></li>
+        </ul>
+    </div>
+<br>
+
+    <!--iPad Cloud Printer Sections-->
+    <div class="container2" id="starPrinter">
+        <p class="nestedHeading">Star Micro Cloud printer (Models TSP650II, TSP700II, TSP100IV)</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Ensure the paper roll is correctly positioned and loaded.</p>
+        <p>- Network Connectivity: Check the printer's LED indicators for error lights and ensure the printer's IP address matches the network's address.</p>
+        <p>- Ensure Ethernet cable is connected and secured. Make sure ethernet cable is connected to the proper switch.</p>
+        <p>- Ensure Star printer is selected in Aktivate's printer settings on the iPad.</p>
+<br>
+        <p>Star Printer TSP650II:</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/65a7bcf4-5f1a-42b5-881c-d59a7cae99ca/starprinter-6500ii.jpg"><br>
+        <p>Star Printer TSP700II:</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/b4173f05-c258-4612-a1f3-9e9ac13efa9f/startsp700ii.jpeg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/2283649" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br>
+        <button type="button" class="close" onclick="closeStarPrinter()">Close</button>
+    </div>
+    <div class="container2" id="epsonPrinter">
+        <p class="nestedHeading">Epson TM-T88VI</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Ensure the printer is powered on and connected to the same network as the iPad.</p>
+        <p>- Restart the printer: Turn it off, wait a few seconds, and turn it back on.</p>
+        <p>- Check Paper Loading: Ensure the thermal paper is loaded correctly</p>
+        <p>- Adjust Print Settings: Press and hold the 'Feed' button until the printer emits a beep, then release it to print a settings report</p>
+        <p>- Ensure Ethernet cable is connected and secured. Make sure ethernet cable is connected to the proper switch.</p>
+        <p>- Ensure Epson printer is selected in Aktivate's printer settings on the iPad.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/0f3bf0a6-d5a2-4e1e-acbb-ea4e3434f3fb/epsonprinter.jpg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/path/357026/activity/2305264" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br>
+        <button type="button" class="close" onclick="closeEpsonPrinter()">Close</button>
+    </div>
+<br>
+
+    <div class="container" id="fullSizePrinters">
+        <a href="javascript:void(0)" onclick="unhideUl8()">Full Size Printers</a><br><br>
+        <ul class="unorderedList1" id="ul8">
+            <li><a href="javascript:void(0)" onclick="openDell1()">Dell c3760dn</a></li>
+            <li><a href="javascript:void(0)" onclick="openDell2()">Dell c2660dn</a></li>
+            <li><a href="javascript:void(0)" onclick="openXerox6022()">Xerox Phaser 6022</a></li>
+            <li><a href="javascript:void(0)" onclick="openLexmarkCX331()">Lexmark CX331</a></li><br><br>
+            <span style="font-size: 13px; color: blue; font-family: Roboto, sans-serif;">*We support installing drivers for ALL full size printers, even printers not listed here.*</span><br><br>
+            <span style="font-size: 13px; color: blue; font-family: Roboto, sans-serif;">*It's recommended to configure printers as a network printer and connected via ethernet cable to Cisco Ports 3-10.*</span>
+        </ul>
+    </div>
+<br>
+
+    <!--full size printer sections-->
+    <div class="container2" id="dell1">
+        <p class="nestedHeading">Dell C3760DN</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check Power Connection: Ensure the power cable is securely connected to the printer and the power outlet.</p>
+        <p>- Turn Off and Restart: If issues persist, turn off the printer, wait for 10 seconds and then turn it back on.</p>
+        <p>- Check Network: Make sure ethernet cable is plugged into the printer and reseat cable. Power cycle printer after reseating cable.</p>
+        <p>- Follow Ethernet connection: Ensure ethernet cable is connected to switch, port in which it's connected is active and transmitting network connectivity.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/73e02e58-48fb-463e-837e-d3de767fb68a/dell-printer-c370dn.jpeg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2746589-ros-windows-11-full-size-printer-troubleshooting" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeDell1()">Close</button>
+    </div>
+    <div class="container2" id="dell2">
+        <p class="nestedHeading">Dell C2660DN</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check Power Connection: Ensure the power cable is securely connected to the printer and the power outlet.</p>
+        <p>- Turn Off and Restart: If issues persist, turn off the printer, wait for 10 seconds and then turn it back on.</p>
+        <p>- Check Network: Make sure ethernet cable is plugged into the printer and reseat cable. Power cycle printer after reseating cable.</p>
+        <p>- Follow Ethernet connection: Ensure ethernet cable is connected to switch, port in which it's connected is active and transmitting network connectivity.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/767f57ac-d0c1-4b15-a36c-0b47092ed9ea/dell-printer-c2660dn.png"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2746589-ros-windows-11-full-size-printer-troubleshooting" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeDell2()">Close</button>
+    </div>
+    <div class="container2" id="xerox6022">
+        <p class="nestedHeading">Xerox Phaser 6022</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check Power Connection: Ensure the power cable is securely connected to the printer and the power outlet.</p>
+        <p>- Turn Off and Restart: If issues persist, turn off the printer, wait for 10 seconds and then turn it back on.</p>
+        <p>- Check Network: Make sure ethernet cable is plugged into the printer and reseat cable. Power cycle printer after reseating cable.</p>
+        <p>- Follow Ethernet connection: Ensure ethernet cable is connected to switch, port in which it's connected is active and transmitting network connectivity.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/7a811260-1203-458a-bfa4-05d0e5e7b112/xerox6022.jpeg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2746589-ros-windows-11-full-size-printer-troubleshooting" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeXerox6022()">Close</button>
+    </div>
+    <div class="container2" id="lexmarkCX331">
+        <p class="nestedHeading">Lexmark CX331</p>
+        <p>Basic Troubleshooting:</p>
+        <p>- Check Power Connection: Ensure the power cable is securely connected to the printer and the power outlet.</p>
+        <p>- Turn Off and Restart: If issues persist, turn off the printer, wait for 10 seconds and then turn it back on.</p>
+        <p>- Check Network: Make sure ethernet cable is plugged into the printer and reseat cable. Power cycle printer after reseating cable.</p>
+        <p>- Follow Ethernet connection: Ensure ethernet cable is connected to switch, port in which it's connected is active and transmitting network connectivity.</p>
+<br>
+        <img class="dealerImages" src="https://exceed-primary-production-public-uploads.s3.amazonaws.com/markdown_editor_uploads/exceedlms-com/3045947/db746f24-6abd-42cf-b833-2f99aae70d28/lexmarkcx331.jpg"><br>
+        <p><a href="https://learning.cricketwireless.com/student/page/2746589-ros-windows-11-full-size-printer-troubleshooting" target="_blank">Exceed Articles: If the issue persists, click here.</a></p>
+<br><br>
+        <button type="button" class="close" onclick="closeLexmarkCX331()">Close</button>
+    </div>
+<br>
+
+
+
+
+    <script>
+
+        // unhide functions for main ul sections
+
+function unhideUl1() {
+    const ul1 = document.getElementById("ul1");
+    const hideUl2 = document.getElementById("ul2");
+    const hideul3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl2.classList.remove("unhide");
+    hideul3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul1.classList.toggle("unhide");
+    //closeOptiplex();
+    //closeOptiplexMicro();
+    //closeOptiplexMicroPro();
+    //closeiPad();
+    //closeiPadMini();
+}
+
+function unhideUl2() {
+    const ul2 = document.getElementById("ul2");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul2.classList.toggle("unhide");
+    closeMX68();
+    closeMR28();
+}
+
+function unhideUl3() {
+    const ul3 = document.getElementById("ul3");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul3.classList.toggle("unhide");
+    closeNetGear();
+    closeDell2816();
+    closeDellX1018p();
+}
+
+function unhideUl4() {
+    const ul4 = document.getElementById("ul4");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl3 = document.getElementById("ul3");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl3.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul4.classList.toggle("unhide");
+    closeLane7000();
+    closeLink2500();
+}
+ function unhideUl5() {
+    const ul5 = document.getElementById("ul5");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul5.classList.toggle("unhide");
+    closeKDC();
+    closeLS2208();
+}
+
+function unhideUl6() {
+    const ul6 = document.getElementById("ul6");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul6.classList.toggle("unhide");
+    closeKube2();
+    closeQ3x();
+}
+
+function unhideUl7() {
+    const ul7 = document.getElementById("ul7");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl8 = document.getElementById("ul8");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul7.classList.toggle("unhide");
+    closeStarPrinter();
+    closeEpsonPrinter();
+}
+
+function unhideUl8() {
+    const ul8 = document.getElementById("ul8");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideP1 = document.getElementById("p1");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideP1.classList.remove("unhide");
+    ul8.classList.toggle("unhide");
+    closeDell1();
+    closeDell2();
+    closeXerox6022();
+    closeLexmarkCX331();
+}
+
+function unhideP1() {
+    const p1 = document.getElementById("p1");
+    const hideUl1 = document.getElementById("ul1");
+    const hideul2 = document.getElementById("ul2");
+    const hideUl3 = document.getElementById("ul3");
+    const hideUl4 = document.getElementById("ul4");
+    const hideUl5 = document.getElementById("ul5");
+    const hideUl6 = document.getElementById("ul6");
+    const hideUl7 = document.getElementById("ul7");
+    const hideUl8 = document.getElementById("ul8");
+    hideUl1.classList.remove("unhide");
+    hideul2.classList.remove("unhide");
+    hideUl3.classList.remove("unhide");
+    hideUl4.classList.remove("unhide");
+    hideUl5.classList.remove("unhide");
+    hideUl6.classList.remove("unhide");
+    hideUl7.classList.remove("unhide");
+    hideUl8.classList.remove("unhide");
+    p1.classList.toggle("unhide");
+
+    if (p1.classList.contains("unhide")) {
+        hideMainElementsE();
+    } else {
+        showMainElementsB();
+    }
+}
+
+// unhide functions for nested ul sections
+
+function openOptiplex() {
+    const optiplexSection = document.getElementById("optiplex");
+    optiplexSection.classList.toggle("unhide");
+    hideMainElements8();
+    hideUl1();
+}
+
+function openOptiplexMicro() {
+    const optiplexMicroSection = document.getElementById("optiplexMicro");
+    optiplexMicroSection.classList.toggle("unhide");
+    hideMainElements8();
+    hideUl1();
+}
+
+function openOptiplexMicroPro() {
+    const optiplexMicroProSection = document.getElementById("optiplexMicroPro");
+    optiplexMicroProSection.classList.toggle("unhide");
+    hideMainElements8();
+    hideUl1();
+    //ul2.style.display = "none";
+    //optiplexMicroProSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function openiPad() {
+    const iPadSection = document.getElementById("iPad");
+    iPadSection.classList.toggle("unhide");
+    hideMainElements8();
+    hideUl1();
+    //iPadSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function openiPadMini() {
+    const iPadMiniSection = document.getElementById("iPadMini");
+    iPadMiniSection.classList.toggle("unhide");
+    hideMainElements8();
+    hideUl1();
+    //ul2.style.display = "none";
+    //iPadMiniSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// close functions for sections
+
+function closeOptiplex() {
+    const optiplexSection = document.getElementById("optiplex");
+    optiplexSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeOptiplexMicro() {
+    const optiplexMicroSection = document.getElementById("optiplexMicro");
+    optiplexMicroSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeOptiplexMicroPro() {
+    const optiplexMicroProSection = document.getElementById("optiplexMicroPro");
+    optiplexMicroProSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeiPad() {
+    const iPadSection = document.getElementById("iPad");
+    iPadSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeiPadMini() {
+    const iPadMiniSection = document.getElementById("iPadMini");
+    iPadMiniSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeMX68() {
+    const statusLightsSection = document.getElementById("mx68Section");
+    statusLightsSection.classList.remove("unhide");
+    show = showMainElementsB()
+}
+
+function closeNoLights() {
+    const noLightsSection = document.getElementById("noLights");
+    const showAmberLights = document.getElementById("solidAmberLights").parentElement;
+    const showLEDelement = document.getElementById("closeLEDelement").parentElement;
+    const showCloseButton = document.getElementById("closeElement");
+    showLEDelement.style.display = "block";
+    showCloseButton.style.display = "block";
+    showAmberLights.style.display = 'block';
+    noLightsSection.classList.remove("unhide");
+}
+
+function closeSolidAmber() {
+    const solidAmberSection = document.getElementById("solidAmber");
+    const showNoLights = document.getElementById("noLinkLights").parentElement;
+    const showLEDelement = document.getElementById("closeLEDelement").parentElement;
+    const showCloseButton = document.getElementById("closeElement");
+    showLEDelement.style.display = "block";
+    showCloseButton.style.display = "block";
+    showNoLights.style.display = "block";
+    solidAmberSection.classList.remove("unhide");
+}
+
+function closeStatusLights() {
+    const statusLightsSection = document.getElementById("mx68StatusLights");
+    statusLightsSection.classList.remove("unhide");
+    show = showMainElementsB();
+} 
+
+function closeLED() {
+    const ledSection = document.getElementById("LED");
+    ledSection.classList.remove("unhide");
+}
+
+function closeMR28() {
+    const mr28Section = document.getElementById("MR28");
+    mr28Section.classList.remove("unhide");
+    show = showMainElementsB()
+}
+
+function closeDell2816() {
+    const dell2816Section = document.getElementById("dell2816");
+    dell2816Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeDellX1018p() {
+    const dellX1018pSection = document.getElementById("dellX1018p");
+    dellX1018pSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeNetGear() {
+    const netGearSection = document.getElementById("netGear");
+    netGearSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeLane7000() {
+    const lane7000Section = document.getElementById("lane7000");
+    lane7000Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeLink2500() {
+    const link2500Section = document.getElementById("link2500");
+    link2500Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeP1() {
+    const p1Section = document.getElementById("p1");
+    p1Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeKDC() {
+    const KDCSection = document.getElementById("KDC");
+    KDCSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeLS2208() {
+    const LS2208Section = document.getElementById("LS2208");
+    LS2208Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeKube2() {
+    const kube2Section = document.getElementById("kube2");
+    kube2Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeQ3x() {
+    const Q3xSection = document.getElementById("Q3x");
+    Q3xSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeStarPrinter() {
+    const starPrinterSection = document.getElementById("starPrinter");
+    starPrinterSection.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+function closeEpsonPrinter() {
+    const epsonPrinterSection = document.getElementById("epsonPrinter");
+    epsonPrinterSection.classList.remove("unhide");
+    show = showMainElementsB();
+}   
+
+function closeDell1() {
+    const dell1Section = document.getElementById("dell1");
+    dell1Section.classList.remove("unhide");
+    show = showMainElementsB();
+}   
+function closeDell2() {
+    const dell2Section = document.getElementById("dell2");
+    dell2Section.classList.remove("unhide");
+    show = showMainElementsB();
+}   
+function closeXerox6022() {
+    const xerox6022Section = document.getElementById("xerox6022");
+    xerox6022Section.classList.remove("unhide");
+    show = showMainElementsB();
+}   
+function closeLexmarkCX331() {
+    const lexmarkCX331Section = document.getElementById("lexmarkCX331");
+    lexmarkCX331Section.classList.remove("unhide");
+    show = showMainElementsB();
+}
+
+
+
+
+
+// Add more functions as needed for other sections
+
+// open functions for firewall sections
+
+function openMX68() {
+    const mx68Section = document.getElementById("mx68Section");
+    mx68Section.classList.toggle("unhide");
+    hideMainElementsB();
+    hideUl2();
+
+}
+
+function openStatusLights() {
+    const statusLightsSection = document.getElementById("mx68StatusLights");
+    statusLightsSection.classList.toggle("unhide");
+}
+
+function openNoLights() {
+    const noLightsSection = document.getElementById("noLights");
+    const hideAmberLights = document.getElementById("solidAmberLights").parentElement;
+    const hideLEDelement = document.getElementById("closeLEDelement").parentElement;
+    const hideCloseButton = document.getElementById("closeElement");
+    
+    if (noLightsSection.classList.contains("unhide")) {
+        hideLEDelement.style.display = "block";
+        hideCloseButton.style.display = "block";
+        hideAmberLights.style.display = 'block';
+    } else {
+        hideLEDelement.style.display = "none";
+        hideCloseButton.style.display = "none";
+        hideAmberLights.style.display = 'none';
+    }
+
+    noLightsSection.classList.toggle("unhide");
+}
+
+function openSolidAmber() {
+    const solidAmberSection = document.getElementById("solidAmber");
+    const hideNoLights = document.getElementById("noLinkLights").parentElement;
+    const hideLEDelement = document.getElementById("closeLEDelement").parentElement;
+    const hideCloseButton = document.getElementById("closeElement");
+    
+    if (solidAmberSection.classList.contains("unhide")) {
+        hideLEDelement.style.display = "block";
+        hideCloseButton.style.display = "block";
+        hideNoLights.style.display = "block";
+    } else {
+        hideLEDelement.style.display = "none";
+        hideCloseButton.style.display = "none";
+        hideNoLights.style.display = "none";
+    }
+
+    solidAmberSection.classList.toggle("unhide");
+    
+}
+
+function openLED() {
+    const ledSection = document.getElementById("LED");
+    ledSection.classList.toggle("unhide");
+}
+
+function openMR28() {
+    const mr28Section = document.getElementById("MR28");
+    mr28Section.classList.toggle("unhide");
+    hideMainElementsB();
+    hideUl2();
+}
+
+
+// open functions for network switch sections
+
+function openDellPowerConnect() {
+    const dell2816Section = document.getElementById("dell2816");
+    dell2816Section.classList.toggle("unhide");
+    hide = hideMainElementsC();
+    hideUl3();
+}
+
+function openDellX1018p() {
+    const dellX1018pSection = document.getElementById("dellX1018p");
+    dellX1018pSection.classList.toggle("unhide");
+    hide = hideMainElementsC();
+    hideUl3();
+}   
+
+function openNetGear() {
+    const netGearSection = document.getElementById("netGear");
+    netGearSection.classList.toggle("unhide");
+    hide = hideMainElementsC();
+    hideUl3();
+}   
+
+
+// open functions for payment terminal sections
+
+function openLane7000() {
+    const lane7000Section = document.getElementById("lane7000");
+    lane7000Section.classList.toggle("unhide");
+    hide = hideMainElementsD();
+    hideUl4();
+}
+
+function openLink2500() {
+    const link2500Section = document.getElementById("link2500");
+    link2500Section.classList.toggle("unhide");
+    hide = hideMainElementsD();
+    hideUl4();
+}   
+
+//open functions for barcode scanner sections
+
+function openKDC() {
+    const KDCSection = document.getElementById("KDC");
+    KDCSection.classList.toggle("unhide");
+    hide = hideMainElementsF();
+    hideUl5();
+}
+function openLS2208() {
+    const LS2208Section = document.getElementById("LS2208");
+    LS2208Section.classList.toggle("unhide");
+    hide = hideMainElementsF();
+    hideUl5();
+}
+
+// open functions for pc receipt printer sections
+
+function openKube2() {
+    const kube2Section = document.getElementById("kube2");
+    kube2Section.classList.toggle("unhide");
+    hide = hideMainElementsG();
+    hideUl6();
+}
+
+function openQ3x() {
+    const Q3xSection = document.getElementById("Q3x");
+    Q3xSection.classList.toggle("unhide");
+    hide = hideMainElementsG();
+    hideUl6();
+}
+
+//open functions for ipad cloud receipt printer sections
+function openStarPrinter() {
+    const starPrinterSection = document.getElementById("starPrinter");
+    starPrinterSection.classList.toggle("unhide");
+    hide = hideMainElementsH();
+    hideUl7();
+}
+function openEpsonPrinter() {
+    const epsonPrinterSection = document.getElementById("epsonPrinter");
+    epsonPrinterSection.classList.toggle("unhide");
+    hide = hideMainElementsH();
+    hideUl7();
+}   
+
+// open functions for full size printer sections
+function openDell1() {
+    const dell1Section = document.getElementById("dell1");
+    dell1Section.classList.toggle("unhide");
+    dell1Section.style.margin = "0 auto";
+    hide = hideMainElementsI();
+    hideUl8();
+}
+
+function openDell2() {
+    const dell2Section = document.getElementById("dell2");
+    dell2Section.classList.toggle("unhide");
+    hide = hideMainElementsI();
+    hideUl8();
+}   
+function openXerox6022() {
+    const xerox6022Section = document.getElementById("xerox6022");
+    xerox6022Section.classList.toggle("unhide");
+    hide = hideMainElementsI();
+    hideUl8();
+}
+function openLexmarkCX331() {
+    const lexmarkCX331Section = document.getElementById("lexmarkCX331");
+    lexmarkCX331Section.classList.toggle("unhide");
+    hide = hideMainElementsI();
+    hideUl8();
+}
+
+
+// hide main elements when sections are opened
+
+
+function hideMainElements8() {
+    // does not include ul1 - point of sales computers and back office computers
+    //const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    //hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+
+}
+
+function hideMainElementsB() {
+    const hidePOS = document.getElementById('posComputers');
+    //const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    //hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsC() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    //const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    //hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsD() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    //const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    //hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsE() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    //const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    //hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsF() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    //const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    //hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsG() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    //const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    //hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsH() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    //const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    //hideiPadCloudPrinters.style.display = "none";
+    hideFullSizePrinters.style.display = "none";
+}
+
+function hideMainElementsI() {
+    const hidePOS = document.getElementById('posComputers');
+    const hideFirewalls = document.getElementById('firewalls');
+    const hideNetworkSwitch = document.getElementById('networkSwitch');
+    const hidePaymentTerminals = document.getElementById('paymentTerminals');
+    const hideCashDrawer = document.getElementById('apgCashDrawer');
+    const hideBarcodeScanners = document.getElementById('barcodeScanner');
+    const hidePCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const hideiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    //const hideFullSizePrinters = document.getElementById('fullSizePrinters');
+    hidePOS.style.display = "none";
+    hideFirewalls.style.display = "none";
+    hideNetworkSwitch.style.display = "none";
+    hidePaymentTerminals.style.display = "none";
+    hideCashDrawer.style.display = "none";
+    hideBarcodeScanners.style.display = "none";
+    hidePCReceiptPrinters.style.display = "none";
+    hideiPadCloudPrinters.style.display = "none";
+    //hideFullSizePrinters.style.display = "none";
+}
+
+
+// show main elements when sections are closed
+
+function showMainElementsB() { 
+    const showPOS = document.getElementById('posComputers');
+    const showFirewalls = document.getElementById('firewalls');
+    const showNetworkSwitch = document.getElementById('networkSwitch');
+    const showPaymentTerminals = document.getElementById('paymentTerminals');
+    const showCashDrawer = document.getElementById('apgCashDrawer');
+    const showBarcodeScanners = document.getElementById('barcodeScanner');
+    const showPCReceiptPrinters = document.getElementById('pcReceiptPrinters');
+    const showiPadCloudPrinters = document.getElementById('iPadCloudReceiptPrinters');
+    const showFullSizePrinters = document.getElementById('fullSizePrinters');
+    showPOS.style.display = "block";
+    showFirewalls.style.display = "block";
+    showNetworkSwitch.style.display = "block";
+    showPaymentTerminals.style.display = "block";
+    showCashDrawer.style.display = "block";
+    showBarcodeScanners.style.display = "block";
+    showPCReceiptPrinters.style.display = "block";
+    showiPadCloudPrinters.style.display = "block";
+    showFullSizePrinters.style.display = "block";
+}
+
+
+// hide nested ul functions
+
+function hideUl1() {
+    const nestedUl1 = document.getElementById("ul1");
+    nestedUl1.classList.remove("unhide");
+}
+
+function hideUl2() {
+    const nestedUl2 = document.getElementById("ul2");
+    nestedUl2.classList.remove("unhide");
+}
+
+function hideUl3() {
+    const nestedUl3 = document.getElementById("ul3");
+    nestedUl3.classList.remove("unhide");
+}
+
+function hideUl4() {
+    const nestedUl4 = document.getElementById("ul4");
+    nestedUl4.classList.remove("unhide");
+}
+
+function hideP1() {
+    const nestedP1 = document.getElementById("p1");
+    nestedP1.classList.remove("unhide");
+}
+
+function hideUl5() {
+    const nestedUl5 = document.getElementById("ul5");
+    nestedUl5.classList.remove("unhide");
+}   
+
+function hideUl6() {
+    const nestedUl6 = document.getElementById("ul6");
+    nestedUl6.classList.remove("unhide");
+}   
+
+function hideUl7() {
+    const nestedUl7 = document.getElementById("ul7");
+    nestedUl7.classList.remove("unhide");
+}
+
+function hideUl8() {
+    const nestedUl8 = document.getElementById("ul8");
+    nestedUl8.classList.remove("unhide");
+}
+
+// Image expansion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const dealerImages = document.querySelectorAll('.dealerImages');
+    const overlay = document.getElementById('imageOverlay');
+    const overlayImage = document.getElementById('overlayImage');
+
+    dealerImages.forEach(img => {
+        img.addEventListener('click', function() {
+            overlayImage.src = this.src;
+            overlay.classList.add('active');
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        overlay.classList.remove('active');
+    });
+});
+
+
+
+    </script>
+
+
+</section>
